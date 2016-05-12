@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d54b40"
+    tools:context=".activity.MainActivity">
+
+    <include
+        android:id="@+id/main_header"
+        layout="@layout/header_layout" />
+
+    <include
+        android:id="@+id/main_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_below="@+id/main_header"
+        layout="@layout/main_picture_layout" />
+
+    <fragment
+        class="com.mediaplayer.wanyt.fragment.SongsListFragment"
+        android:id="@+id/fragment_songlist"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below="@+id/main_picture"/>
+
+</RelativeLayout>
