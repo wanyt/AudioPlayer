@@ -25,7 +25,7 @@ public class SplashActivity extends Activity {
                 new Runnable() {
                     @Override
                     public void run() {
-                        JumpUtil.toActivity(SplashActivity.this, MainActivity.class);
+                        JumpUtil.toActivity(SplashActivity.this, LoginActivity.class);
                         finish();
                     }
                 }, 3000);

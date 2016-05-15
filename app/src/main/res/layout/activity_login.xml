@@ -4,15 +4,34 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#bf85e3">
+    android:background="@color/purple">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3.7">
+        android:paddingBottom="20dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_weight="3">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MUSIC FOR FREE"
+            android:textSize="35sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"/>
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OUR SPIRITUAL WORLD"
+            android:paddingTop="10dp"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,9 +40,100 @@
 
         <RelativeLayout
             android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_height="230dp"
             android:layout_centerHorizontal="true"
+            android:padding="20dp"
             android:background="@drawable/shape_rect_white">
+
+            <LinearLayout
+                android:id="@+id/ll_login_user"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_rect_pink">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/icon_user"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/pink"
+                    android:hint="Email"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/ll_login_user"
+                android:paddingLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_rect_pink">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@mipmap/icon_lock"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/pink"
+                    android:hint="Password"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/white"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_login_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/ll_login_password"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hold password"
+                    android:textColor="#777777"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/checkBox"
+                    style="@style/CustomCheckboxTheme"
+                    android:checked="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#777777"
+                    android:textSize="12sp"
+                    android:text="forget password?"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="LOGIN"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_rect_purple"/>
+
 
         </RelativeLayout>
 
