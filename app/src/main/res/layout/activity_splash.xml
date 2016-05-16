@@ -7,10 +7,22 @@
         android:id="@+id/iv_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/app_splash"/>
+        android:background="@mipmap/app_splash_black"/>
+
+    <TextView
+        android:id="@+id/tv_splash_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MUSIC IS LIFE"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/rl_splash_login_root"
+        android:paddingBottom="30dp"/>
 
 
     <RelativeLayout
+        android:id="@+id/rl_splash_login_root"
         android:layout_width="300dp"
         android:layout_height="230dp"
         android:layout_centerInParent="true"
@@ -99,6 +111,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tv_splash_login"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:text="LOGIN"
@@ -106,7 +119,7 @@
             android:textSize="17sp"
             android:layout_alignParentBottom="true"
             android:textColor="@color/white"
-            android:background="@drawable/shape_rect_translate_blue"/>
+            android:background="@drawable/selector_login_button"/>
 
     </RelativeLayout>
 
