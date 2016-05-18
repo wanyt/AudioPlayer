@@ -1,5 +1,6 @@
 package com.mediaplayer.wanyt.activity;
 
+import android.app.LauncherActivity;
 import android.graphics.Color;
 import android.os.Handler;
 import android.view.View;

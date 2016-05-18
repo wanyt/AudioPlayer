@@ -14,10 +14,12 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.mediaplayer.wanyt.R;
 import com.mediaplayer.wanyt.constant.Constants;
 import com.mediaplayer.wanyt.bean.SongInfo;
 import com.mediaplayer.wanyt.adapter.SongsListAdapter;
 import com.mediaplayer.wanyt.manager.PlayManager;
+import com.mediaplayer.wanyt.utils.LogUtil;
 
 import java.util.ArrayList;
 
@@ -43,11 +45,7 @@ public class SongsListFragment extends ListFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        songsAdapter = new SongsListAdapter(getActivity(), allSong);
-        ListView listView = getListView();
-        listView.setDivider(new ColorDrawable(Color.parseColor("#bc2238")));
-        listView.setDividerHeight(2);
+        songsAdapter = new SongsListAdapter(getActivity(), R.layout.item_song_layout, allSong);
         setListAdapter(songsAdapter);
     }
 
@@ -71,8 +69,6 @@ public class SongsListFragment extends ListFragment {
                 //获取到了设备所有的音频资源
                 allSong = songs;
                 songsAdapter.setData(allSong);
-//                Toast.makeText(getActivity(),
-//                        "检测到"+allSong.size()+"个音频文件", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(getActivity(),
                         "未发现音频文件", Toast.LENGTH_SHORT).show();

@@ -22,13 +22,11 @@ public class DensityUtil {
 
     public static int getScreenHeight(Context context){
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
-        LogUtil.v("height::"+metrics.heightPixels);
         return metrics.heightPixels;
     }
 
     public static int getScreenWidth(Context context){
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
-        LogUtil.v("width::"+metrics.widthPixels);
         return metrics.widthPixels;
     }
 

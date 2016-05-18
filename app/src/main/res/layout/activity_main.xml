@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d54b40"
+    android:background="@mipmap/pic_blur_musicbg"
     tools:context=".activity.MainActivity">
 
     <include
@@ -13,8 +13,8 @@
     <include
         android:id="@+id/main_picture"
         android:layout_width="wrap_content"
-        android:layout_height="240dp"
-        android:layout_below="@+id/main_header"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
         layout="@layout/main_picture_layout" />
 
     <fragment
@@ -22,6 +22,8 @@
         android:id="@+id/fragment_songlist"
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        android:layout_below="@+id/main_picture" />
+        android:layout_below="@+id/main_header"
+        android:layout_above="@+id/main_picture"
+        tools:layout="@layout/abc_alert_dialog_material" />
 
 </RelativeLayout>

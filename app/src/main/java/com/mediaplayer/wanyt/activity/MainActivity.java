@@ -1,11 +1,16 @@
 package com.mediaplayer.wanyt.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.mediaplayer.wanyt.R;
 import com.mediaplayer.wanyt.base.BaseActivity;
 import com.mediaplayer.wanyt.service.ScanSongsService;
+
+import jp.wasabeef.blurry.Blurry;
 
 /**
  * Created on 2016/4/25 17:51
@@ -25,6 +30,7 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
 
     }
+
 
     @Override
     protected void initData() {

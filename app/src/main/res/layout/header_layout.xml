@@ -4,31 +4,44 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#9c3030"
+    android:background="#00000000"
     android:padding="10dp">
 
     <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_centerVertical="true"
-        android:background="@mipmap/ic_album" />
+        android:background="@mipmap/icon_menu" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ALBUM PLAYING"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_centerInParent="true"
-        android:textColor="#fe9b96"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的音乐"
+            android:textSize="17sp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多音乐"
+            android:paddingLeft="15dp"
+            android:textSize="17sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
 
     <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_alignParentRight="true"
-        android:background="@mipmap/ic_menu" />
-
-
-
+        android:layout_centerVertical="true"
+        android:background="@mipmap/icon_search" />
 
 </RelativeLayout>
