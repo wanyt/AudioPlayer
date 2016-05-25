@@ -4,71 +4,70 @@
     android:layout_height="50dp"
     android:background="#20000000">
 
-        <!--FFD39B-->
-        <ImageView
-            android:id="@+id/iv_main_pic_music"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="5dp"
-            android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/iv_main_pic_music"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"/>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/iv_main_pic_music">
         <TextView
             android:id="@+id/tv_main_pic_songname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="adele"
+            android:text="I will always love you"
+            android:textSize="15sp"
             android:textColor="#ffffff"
-            android:textSize="11sp"
-            android:paddingLeft="15dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="16dp"
             android:maxWidth="180dp"
-            android:maxLines="1"
-            android:paddingTop="1dp"
-            android:layout_alignTop="@+id/iv_main_pic_music"
-            android:layout_toRightOf="@+id/iv_main_pic_music"/>
+            android:maxLines="1"/>
 
         <TextView
+            android:id="@+id/tv_main_pic_singer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="i will always love you"
+            android:text="adele"
+            android:textSize="14sp"
             android:textColor="#ffffff"
             android:paddingLeft="15dp"
-            android:paddingBottom="4dp"
-            android:textSize="16sp"
-            android:layout_alignLeft="@+id/tv_main_pic_songname"
-            android:layout_alignBottom="@+id/iv_main_pic_music"/>
+            android:maxLines="1"
+            android:layout_below="@+id/tv_main_pic_songname"/>
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true">
+        <ImageButton
+            android:id="@+id/ib_main_pic_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_main_previous"
+            android:layout_alignParentBottom="true"/>
 
-        <RelativeLayout
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
-            android:gravity="center_vertical"
-            android:layout_alignParentRight="true">
+        <ImageButton
+            android:id="@+id/ib_main_pic_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_play"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
 
-            <ImageView
-                android:id="@+id/iv_main_pic_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@mipmap/icon_skip_next"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"/>
-
-            <ImageView
-                android:id="@+id/iv_main_pic_play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@mipmap/icon_play"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"/>
-
-            <ImageView
-                android:id="@+id/iv_main_pic_previous"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@mipmap/icon_skip_previous"
-                android:layout_alignParentBottom="true"/>
-
-        </RelativeLayout>
-
+        <ImageButton
+            android:id="@+id/ib_main_pic_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_main_next"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
 
 </RelativeLayout>

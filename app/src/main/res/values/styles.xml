@@ -4,6 +4,11 @@
         <item name="android:button">@drawable/selector_checkbox</item>
     </style>
 
+    <!--<style name="CustomeProgressBar" parent="@style/Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="progress"
+
+    </style>-->
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

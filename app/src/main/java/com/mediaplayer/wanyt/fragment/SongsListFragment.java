@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.mediaplayer.wanyt.R;
+import com.mediaplayer.wanyt.app.SongsList;
 import com.mediaplayer.wanyt.constant.Constants;
 import com.mediaplayer.wanyt.bean.SongInfo;
 import com.mediaplayer.wanyt.adapter.SongsListAdapter;
@@ -51,8 +52,7 @@ public class SongsListFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        SongInfo song = (SongInfo) l.getItemAtPosition(position);
-        PlayManager.getInstance().tapFromUser(song.path);
+        PlayManager.getInstance().playAccordingPath(position);
         super.onListItemClick(l, v, position, id);
     }
 
@@ -69,6 +69,7 @@ public class SongsListFragment extends ListFragment {
                 //获取到了设备所有的音频资源
                 allSong = songs;
                 songsAdapter.setData(allSong);
+                SongsList.getInstance().setNormalSongsList(allSong);
             }else{
                 Toast.makeText(getActivity(),
                         "未发现音频文件", Toast.LENGTH_SHORT).show();
