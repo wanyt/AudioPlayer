@@ -1,6 +1,7 @@
 package com.mediaplayer.wanyt.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageButton;
@@ -16,6 +17,8 @@ import com.mediaplayer.wanyt.manager.IPlayState;
 import com.mediaplayer.wanyt.manager.PlayManager;
 import com.mediaplayer.wanyt.service.ScanSongsService;
 import com.mediaplayer.wanyt.utils.LogUtil;
+import com.mediaplayer.wanyt.utils.SongPicUtil;
+import com.meg7.widget.CustomShapeImageView;
 
 import jp.wasabeef.blurry.Blurry;
 
@@ -37,6 +40,7 @@ public class MainActivity extends BaseActivity implements IPlayState {
     private boolean isPlaying;
     private ImageButton ibPrevious, ibPlay, ibNext;
     private TextView tvSongname, tvSinger;
+    private CustomShapeImageView ivSongIcon;
 
     @Override
     protected void initView() {
@@ -47,6 +51,7 @@ public class MainActivity extends BaseActivity implements IPlayState {
         ibNext = get(R.id.ib_main_pic_next);
         tvSongname = get(R.id.tv_main_pic_songname);
         tvSinger = get(R.id.tv_main_pic_singer);
+        ivSongIcon = get(R.id.iv_main_pic_music);
 
         ibPrevious.setOnClickListener(this);
         ibPlay.setOnClickListener(this);
@@ -92,6 +97,9 @@ public class MainActivity extends BaseActivity implements IPlayState {
         if(song != null){
             tvSongname.setText(song.title);
             tvSinger.setText(song.aritst);
+
+            Bitmap pic = SongPicUtil.getArtwork(this, song.id, song.albumId, true, true);
+            ivSongIcon.setImageBitmap(pic);
         }
 
         if(isPlaying){

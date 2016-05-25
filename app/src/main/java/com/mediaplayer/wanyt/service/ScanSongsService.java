@@ -67,7 +67,8 @@ public class ScanSongsService extends IntentService {
     private static String[] searchItem = new String[] {
             MediaStore.Audio.Media.TITLE, MediaStore.Audio.Media.DATA,
             MediaStore.Audio.Media.ARTIST, MediaStore.Audio.Media.DURATION,
-            MediaStore.Audio.Media.ALBUM };
+            MediaStore.Audio.Media.ALBUM, MediaStore.Audio.Media.ALBUM_ID,
+            MediaStore.Audio.Media._ID};
 
     /**
      * 获取并设置歌曲到list中
@@ -81,12 +82,16 @@ public class ScanSongsService extends IntentService {
         String artist = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST));
         long duration = cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION));
         String album = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM));
+        long albumId = cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID));
+        long id = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media._ID));
 
         info.duration = duration;
         info.album = album;
         info.aritst = artist;
         info.title = title;
         info.path = path;
+        info.albumId = albumId;
+        info.id = id;
 
         return info;
     }

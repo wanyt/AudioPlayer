@@ -5,6 +5,7 @@ import android.provider.MediaStore;
 
 import com.mediaplayer.wanyt.app.SongsList;
 import com.mediaplayer.wanyt.bean.SongInfo;
+import com.mediaplayer.wanyt.utils.SongPicUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
