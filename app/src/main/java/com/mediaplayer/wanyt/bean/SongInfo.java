@@ -10,11 +10,13 @@ import java.util.ArrayList;
  */
 public class SongInfo implements Serializable {
 
-    public long duration;
-    public String album;
-    public String title;
-    public String aritst;
-    public String path;
+    public long duration;//歌曲长度
+    public String album;//
+    public String title;//歌曲名称
+    public String aritst;//歌手
+    public String path;//source
+    public long albumId;
+    public long id;
 
     public ArrayList<SongInfo> songs = new ArrayList<SongInfo>();
 
