@@ -1,13 +1,13 @@
 # Overview
-    This project is a Audio Player, that can only play local music so far. It's developted by a indivadual developer, You are welcome to commit updates. Welcome to contact me if you have some question with this project.
-    And the most important thing is the project is under development.
+  This project is a Audio Player, that can only play local music so far. It's developted by a indivadual developer, You are welcome to commit updates. Welcome to contact me if you have some question with this project.
+  And the most important thing is the project is under development.
  
 # Libraries
-    In order to achieve some results we have to introduce these libraries:
+  In order to achieve some results we have to introduce these libraries:
  
- ### com.android.support:appcompat-v7:23.3.0
- ### com.android.support:design:23.3.0
- ### jp.wasabeef:blurry:2.0.2
+ ## com.android.support:appcompat-v7:23.3.0
+ ## com.android.support:design:23.3.0
+ ## jp.wasabeef:blurry:2.0.2
     This library can make the image have a gaussian blur effect.
 
 # Preview
